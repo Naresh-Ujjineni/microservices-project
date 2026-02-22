@@ -28,7 +28,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: nareshujjineni/emailservice:latest
+        image: nareshujjineni/Ecommerce:emailService
         ports:
         - containerPort: 8080
         env:
@@ -81,7 +81,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: nareshujjineni/checkoutservice:latest
+          image: nareshujjineni/Ecommerce:checkoutservice
           ports:
           - containerPort: 5050
           readinessProbe:
@@ -143,7 +143,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: nareshujjineni/recommendationservice:latest
+        image: nareshujjineni/Ecommerce:recommendationservice
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -200,7 +200,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: nareshujjineni/frontend:latest
+          image: nareshujjineni/Ecommerce:frontend
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -297,7 +297,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: nareshujjineni/paymentservice:latest
+        image: nareshujjineni/Ecommerce:paymentservice
         ports:
         - containerPort: 50051
         env:
@@ -349,7 +349,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: nareshujjineni/productcatalogservice:latest
+        image: nareshujjineni/Ecommerce:productcatalogservice
         ports:
         - containerPort: 3550
         env:
@@ -401,7 +401,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: nareshujjineni/cartservice:latest
+        image: nareshujjineni/Ecommerce:cartservice
         ports:
         - containerPort: 7070
         env:
@@ -465,7 +465,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: nareshujjineni/loadgenerator:latest
+        image: nareshujjineni/Ecommerce:loadgenerator
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -496,7 +496,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: nareshujjineni/currencyservice:latest
+        image: nareshujjineni/Ecommerce:currencyservice
         ports:
         - name: grpc
           containerPort: 7000
@@ -548,7 +548,7 @@ spec:
       serviceAccountName: default
       containers:
       - name: server
-        image: nareshujjineni/shippingservice:latest
+        image: nareshujjineni/Ecommerce:shippingservice
         ports:
         - containerPort: 50051
         env:
@@ -654,7 +654,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: nareshujjineni/adservice:latest
+        image: nareshujjineni/Ecommerce:adservice
         ports:
         - containerPort: 9555
         env:
